@@ -613,3 +613,47 @@ section {
     0%, 100% { opacity: 0; transform: scale(0.6); }
     50% { opacity: 0.5; transform: scale(1.1); filter: drop-shadow(0 0 4px #ffffff); }
 }
+/* --- ДОБАВИТЬ ЭТОТ БЛОК В САМЫЙ КОНЕЦ ФАЙЛА MADI.CSS --- */
+
+.owners-card h3 {
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.owners-names {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.single-owner, .couple-owners {
+    font-size: 32px; /* Идеальный размер для обычных телефонов */
+    font-family: 'Cormorant Garamond', serif;
+    color: #333333;
+    margin: 0;
+    white-space: nowrap; /* ГЛАВНОЕ: запрещает тексту разбиваться на две строки */
+}
+
+.owners-card .amp {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 24px;
+    color: #8c8c8c;
+}
+
+.wishing-text {
+    font-style: italic;
+    font-size: 14px;
+    color: #a39081;
+    margin-top: 15px;
+}
+
+/* Специальное правило для маленьких экранов (например, старых iPhone) */
+@media (max-width: 375px) {
+    .single-owner, .couple-owners {
+        font-size: 26px; /* Автоматически уменьшаем шрифт, чтобы 100% всё влезло в один ряд */
+    }
+}
