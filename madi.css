@@ -1,4 +1,3 @@
-/* Базовые настройки сброса */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +6,7 @@
 
 html, body {
     width: 100%;
-    background-color: #eae5df; /* Общий фон вокруг мобильного экрана */
+    background-color: #eae5df; 
     color: #4A3E3D;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
@@ -16,28 +15,48 @@ html, body {
     align-items: center;
 }
 
-/* Общий контейнер для всех секций */
+/* Настройки секций */
 section {
     width: 100%;
     max-width: 450px;
-    padding: 60px 25px;
+    padding: 75px 30px; 
     text-align: center;
-    background-color: #fcfbfa; /* Фирменный нежно-молочный цвет */
+    background-color: #fcfbfa; 
     position: relative;
     overflow: hidden;
 }
 
-/* Красивые заголовки (Курсив) */
+.wedding-ornament {
+    width: 100px;
+    margin: 25px auto;
+    color: rgba(140, 116, 102, 0.35);
+}
+.invitation-text-section .wedding-ornament {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+/* Шрифты заголовков */
 .script-title {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 2.6rem;
+    font-size: 2.8rem;
     font-weight: 400;
     color: #8C7466;
     margin-bottom: 20px;
+    letter-spacing: 1px;
 }
 
-/* 1. ГЛАВНЫЙ ЭКРАН С ТВОЕЙ КАРТИНКОЙ */
+.script-title-white {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 3rem;
+    font-weight: 300;
+    color: #fdfbf7;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* 1. ГЛАВНЫЙ ЭКРАН */
 .hero-section {
     height: 100vh;
     min-height: 650px;
@@ -45,7 +64,7 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #948075; /* Кофейная подложка */
+    background-color: #7a6659; 
     color: #ffffff;
     padding: 0;
 }
@@ -53,153 +72,185 @@ section {
 .hero-bg {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    /* ПОДКЛЮЧАЕМ СКАЧАННУЮ КАРТИНКУ */
     background-image: url('bg-main.jpg');
     background-size: cover;
     background-position: center;
-    opacity: 0.45; /* Идеальное затемнение, чтобы текст "читался" */
+    opacity: 0.32; 
     z-index: 1;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; height: 160px;
+    background: linear-gradient(to top, #a38f84 0%, rgba(163, 143, 132, 0) 100%);
+    z-index: 2;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     text-align: center;
     width: 100%;
-    padding: 0 20px;
 }
 
 .main-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 3.6rem;
-    letter-spacing: 5px;
+    font-size: 3.8rem;
+    letter-spacing: 9px;
     font-weight: 300;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #ffffff 30%, #f4ebd9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .couple-names {
-    font-size: 1.1rem;
-    letter-spacing: 3px;
-    font-weight: 400;
+    font-size: 1.05rem;
+    letter-spacing: 5px;
+    font-weight: 500;
+    color: #fdfbf7;
+    opacity: 0.9;
 }
 
 .monogram {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 5.5rem;
-    margin-top: 20px;
-    opacity: 0.9;
+    font-size: 6rem;
+    margin-top: 25px;
+    background: linear-gradient(to bottom, #ffffff, #f7ebd3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 3px 10px rgba(0,0,0,0.1));
 }
 
-/* 2. СЕКЦИЯ ПРИГЛАШЕНИЯ (Кофейный фон как на фото) */
+/* 2. ВТОРОЙ БЛОК (Цвет латте) */
 .invitation-text-section {
-    background-color: #948075;
+    background-color: #a38f84; 
     color: #ffffff;
-    /* Закругление сверху, перекрывающее фото */
     border-radius: 40px 40px 0 0; 
     margin-top: -40px;
-    z-index: 3;
-    padding-top: 80px;
-}
-
-.invitation-text-section .script-title {
-    color: #ffffff;
+    z-index: 4;
+    padding-top: 95px;
+    box-shadow: 0 -15px 35px rgba(0, 0, 0, 0.06);
 }
 
 .guest-categories {
     font-size: 0.85rem;
-    letter-spacing: 1px;
-    line-height: 2;
-    margin-bottom: 30px;
-    opacity: 0.9;
+    letter-spacing: 1.5px;
+    line-height: 2.3;
+    margin-bottom: 25px;
+    opacity: 0.95;
+    font-weight: 400;
 }
 
 .invitation-call {
-    letter-spacing: 4px;
-    font-size: 1.2rem;
+    letter-spacing: 6px;
+    font-size: 1.3rem;
     margin: 25px 0;
+    font-weight: 500;
+    color: #fefdfb;
 }
 
 .parents-text {
     font-size: 0.85rem;
     letter-spacing: 2px;
+    opacity: 0.85;
 }
 
+/* --- ИСПРАВЛЕННЫЕ СТРОКИ ТУТ (133-146) --- */
 .names-highlight {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 3rem;
+    font-size: 2.3rem; 
     font-weight: 400;
-    margin: 15px 0 30px 0;
-    color: #ffffff;
+    margin: 20px 0 30px 0;
+    letter-spacing: 0.5px;
+    white-space: nowrap; 
+    background: linear-gradient(135deg, #ffffff 40%, #faecd1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.08));
 }
 
 .final-text {
     font-size: 0.85rem;
-    letter-spacing: 1px;
-    line-height: 2;
-    opacity: 0.9;
+    letter-spacing: 1.5px;
+    line-height: 2.2;
+    opacity: 0.95;
 }
 
-/* 3. ПРОГРАММА С ИКОНКАМИ И ВОЛНОЙ */
+/* 3. ТАЙМЛАЙН БАҒДАРЛАМАСЫ */
 .program-section {
     background-color: #fcfbfa;
-    /* Красивый волнообразный вырез сверху */
     border-radius: 40px 40px 0 0;
     margin-top: -40px;
-    z-index: 4;
-    padding-top: 70px;
+    z-index: 5;
+    padding-top: 85px;
+    box-shadow: 0 -12px 35px rgba(0, 0, 0, 0.03);
 }
 
 .section-title {
-    font-size: 1rem;
-    letter-spacing: 3px;
+    font-size: 0.9rem;
+    letter-spacing: 4px;
     color: #8C7466;
     margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .date-text {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     color: #8C7466;
 }
 
 .time-main {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 1.8rem;
-    color: #8C7466;
-    margin-bottom: 30px;
+    font-size: 1.9rem;
+    color: #a68f81;
+    margin-bottom: 20px;
 }
 
-/* Стилизация вертикального таймлайна */
 .timeline {
-    margin: 40px auto 0 auto;
+    margin: 45px auto 10px auto;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 45px;
     max-width: 320px;
     text-align: left;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 25px; top: 5px; bottom: 5px; width: 1px;
+    background: linear-gradient(to bottom, rgba(140, 116, 102, 0) 0%, rgba(140, 116, 102, 0.2) 15%, rgba(140, 116, 102, 0.2) 85%, rgba(140, 116, 102, 0) 100%);
 }
 
 .timeline-item {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
     position: relative;
+    z-index: 2;
 }
 
-/* Круглые иконки слева */
 .timeline-icon {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(148, 128, 117, 0.1);
+    width: 52px; height: 52px;
+    background-color: #fcfbfa;
+    border: 1px solid rgba(140, 116, 102, 0.3);
     border-radius: 50%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.4rem;
+    justify-content: center; align-items: center;
+    box-shadow: 0 4px 15px rgba(140, 116, 102, 0.05);
+}
+
+.timeline-icon svg {
+    width: 22px; height: 22px;
+    stroke: #8C7466;
 }
 
 .timeline-content {
@@ -209,75 +260,129 @@ section {
 
 .time {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 1.9rem;
+    font-weight: 500;
     color: #8C7466;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 .event-desc {
     font-size: 0.8rem;
-    letter-spacing: 1px;
-    color: #6E5E5D;
+    letter-spacing: 1.5px;
+    color: #7A6B6A;
     text-transform: uppercase;
 }
 
 /* 4. МЕСТО ПРОВЕДЕНИЯ */
 .location-section {
     background-color: #fcfbfa;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
 }
 
 .address-text {
     font-size: 0.95rem;
-    letter-spacing: 1px;
-    line-height: 1.8;
-    margin-bottom: 30px;
+    letter-spacing: 1.5px;
+    line-height: 2;
+    margin-bottom: 35px;
 }
 
-.btn-container {
-    margin-bottom: 40px;
+.restaurant-name {
+    font-weight: 600;
+    color: #8C7466;
+    letter-spacing: 1px;
 }
 
 .btn-link {
     display: inline-block;
-    padding: 14px 45px;
-    background-color: #948075;
+    padding: 16px 55px;
+    background: linear-gradient(135deg, #a68f81 0%, #8c7466 100%);
     color: #ffffff;
     text-decoration: none;
     font-size: 0.85rem;
-    letter-spacing: 2px;
-    border-radius: 30px;
-    box-shadow: 0 4px 15px rgba(148, 128, 117, 0.25);
+    font-weight: 500;
+    letter-spacing: 3px;
+    border-radius: 35px;
+    box-shadow: 0 10px 25px rgba(140, 116, 102, 0.18);
+    transition: all 0.3s ease;
 }
 
-.hosts-block {
-    margin-top: 30px;
-    padding-top: 30px;
-    border-top: 1px dashed rgba(140, 116, 102, 0.2);
+.btn-link:hover, .btn-link:active {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(140, 116, 102, 0.25);
 }
 
-.hosts-names {
+/* КАРТОЧКА "ТОЙ ИЕЛЕРІ" */
+.hosts-card {
+    margin: 50px auto 10px auto;
+    padding: 35px 25px;
+    background-color: #fffefe;
+    border: 1px solid rgba(140, 116, 102, 0.18);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(140, 116, 102, 0.04);
+    text-align: center;
+}
+
+.hosts-title {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 2.2rem;
     color: #8C7466;
+    font-weight: 400;
 }
 
-/* 5. СЕКЦИЯ ТАЙМЕРА (С полупрозрачной подложкой под буквы) */
+.hosts-divider {
+    width: 50px;
+    height: 1px;
+    background-color: rgba(140, 116, 102, 0.3);
+    margin: 15px auto;
+}
+
+.hosts-names {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #4A3E3D;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
+
+.hosts-secondary {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.8rem;
+    color: #8C7466;
+    margin-top: 5px;
+}
+
+.card-ornament-top {
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    color: rgba(140, 116, 102, 0.4);
+    margin-bottom: 10px;
+}
+
+.card-ornament-bottom {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #918281;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* 5. ТАЙМЕР */
 .countdown-section {
-    background-color: #4A3E3D;
+    background-color: #3D3332;
     color: #ffffff;
-    padding: 80px 20px;
+    padding: 90px 20px;
 }
 
 .countdown-bg {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background-image: url('bg-main.jpg'); /* Дублируем фотку в таймер */
+    background-image: url('bg-main.jpg');
     background-size: cover;
     background-position: center;
-    opacity: 0.25;
+    opacity: 0.15;
 }
 
 .countdown-content {
@@ -287,47 +392,56 @@ section {
 
 .countdown-title {
     font-family: 'Cormorant Garamond', serif;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     font-size: 2rem;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
+    font-weight: 300;
 }
 
 .timer-container {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 12px;
 }
 
 .timer-block {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 75px;
-    background: rgba(255, 255, 255, 0.08);
-    padding: 12px 5px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(3px);
+    min-width: 78px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 16px 5px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
 .timer-block span {
     font-size: 2.4rem;
     font-weight: 300;
     font-family: 'Cormorant Garamond', serif;
+    color: #fdfbf7;
 }
 
 .timer-block label {
-    font-size: 0.7rem;
-    opacity: 0.7;
-    margin-top: 3px;
+    font-size: 0.75rem;
+    opacity: 0.65;
+    margin-top: 4px;
     letter-spacing: 1px;
 }
 
-/* 6. ФИНАЛЬНЫЙ КРАСИВЫЙ ФУТЕР БЕЗ ЧЕРНОГО ЦВЕТА */
+.wedding-ornament.light {
+    color: rgba(255, 255, 255, 0.25);
+    margin-top: 45px;
+    margin-bottom: 0;
+}
+
+/* 6. ФУТЕР */
 .custom-footer {
     width: 100%;
     max-width: 450px;
-    background-color: #e3ded7; /* Идеальный бежевый тон, чуть темнее сайта */
+    background-color: #e3ded7;
     padding: 50px 20px;
     text-align: center;
     display: flex;
@@ -339,7 +453,6 @@ section {
 
 .made-by-text {
     font-size: 0.85rem;
-    font-weight: 400;
     color: #5A4E4D;
     letter-spacing: 1px;
 }
@@ -349,8 +462,7 @@ section {
     font-style: italic;
     font-size: 1.25rem;
     font-weight: 600;
-    color: #8C7466; /* Выделение твоего имени фирменным цветом */
-    letter-spacing: 0.5px;
+    color: #8C7466;
 }
 
 .footer-copyright {
@@ -360,15 +472,12 @@ section {
     letter-spacing: 1.5px;
     text-transform: uppercase;
 }
-/* 1. Дорогой градиентный фон и текстура */
+
+/* --- ЗАСТАВКА (WELCOME SCREEN) --- */
 #welcome-screen {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    /* Красивый глубокий перелив от кофейного к шоколадному */
-    background: radial-gradient(circle, #a89285 0%, #6e5b51 100%);
+    top: 0; left: 0; width: 100%; height: 100vh;
+    background: radial-gradient(circle, #9c877a 0%, #54443b 100%);
     z-index: 9999;
     display: flex;
     justify-content: center;
@@ -378,120 +487,106 @@ section {
     overflow: hidden;
 }
 
-/* Эффект глубокого растворения при клике */
 #welcome-screen.hidden {
     opacity: 0;
-    transform: scale(1.1);
+    transform: scale(1.08);
     pointer-events: none;
 }
 
-/* 2. Анимация плавного появления контента (Fade-in) */
 .welcome-content {
     text-align: center;
     padding: 30px;
-    animation: fadeInContent 1.8s ease-out forwards;
+    animation: fadeInContent 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @keyframes fadeInContent {
-    0% { opacity: 0; transform: translateY(20px); filter: blur(5px); }
+    0% { opacity: 0; transform: translateY(25px); filter: blur(4px); }
     100% { opacity: 1; transform: translateY(0); filter: blur(0); }
-}
-
-/* Свадебный узор над текстом */
-.welcome-ornament {
-    width: 120px;
-    margin: 0 auto 25px auto;
-    opacity: 0.8;
 }
 
 .welcome-subtitle {
     font-size: 0.8rem;
-    letter-spacing: 6px;
+    letter-spacing: 7px;
     color: #e6dfd9;
-    margin-bottom: 10px;
-    opacity: 0.7;
+    margin-bottom: 12px;
+    opacity: 0.75;
 }
 
 .welcome-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.4rem;
+    font-size: 2.3rem;
     font-weight: 300;
-    /* Благородный золотисто-кремовый цвет текста */
     color: #fdfbf7;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    letter-spacing: 3px;
-    line-height: 1.5;
-    margin-bottom: 50px;
+    letter-spacing: 4px;
+    line-height: 1.6;
+    margin-bottom: 60px;
     text-transform: uppercase;
 }
 
-/* 3. Интерактивная зона кнопки-сердца */
+.gold-text-light {
+    background: linear-gradient(135deg, #fff3daf0 0%, #dcae68 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+}
+
+/* Область сердца */
 .heart-wrapper {
     position: relative;
     display: inline-block;
-    width: 100px;
-    height: 100px;
+    width: 100px; height: 100px;
 }
 
-/* Пульсирующие золотые волны вокруг сердца */
 .heart-pulse-ring {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    width: 80px;
-    height: 80px;
-    border: 2px solid rgba(212, 175, 55, 0.4);
+    width: 80px; height: 80px;
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
     border-radius: 50%;
-    animation: goldWave 2s infinite ease-out;
+    animation: goldWave 2.2s infinite ease-out;
 }
 
 @keyframes goldWave {
     0% { width: 70px; height: 70px; opacity: 1; }
-    100% { width: 130px; height: 130px; opacity: 0; }
+    100% { width: 140px; height: 140px; opacity: 0; }
 }
 
-/* Само бьющееся сердце */
 .heart-btn {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3.8rem;
+    font-size: 3.6rem;
     cursor: pointer;
     user-select: none;
     z-index: 10;
-    filter: drop-shadow(0 4px 15px rgba(0,0,0,0.3));
-    animation: dramaticHeartbeat 1.4s infinite ease-in-out;
+    filter: drop-shadow(0 4px 20px rgba(0,0,0,0.25));
+    animation: dramaticHeartbeat 1.5s infinite ease-in-out;
 }
 
 @keyframes dramaticHeartbeat {
     0% { transform: translate(-50%, -50%) scale(1); }
-    15% { transform: translate(-50%, -50%) scale(1.18); }
-    30% { transform: translate(-50%, -50%) scale(1); }
-    45% { transform: translate(-50%, -50%) scale(1.18); }
+    14% { transform: translate(-50%, -50%) scale(1.15); }
+    28% { transform: translate(-50%, -50%) scale(1); }
+    42% { transform: translate(-50%, -50%) scale(1.15); }
     70% { transform: translate(-50%, -50%) scale(1); }
 }
 
-/* 4. Мерцающие искорки на бэкграунде */
 .stars-container {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
     pointer-events: none;
 }
 
 .star {
     position: absolute;
-    font-size: 1.2rem;
-    color: #d4af37; /* Золотой цвет искр */
+    font-size: 1.1rem;
     opacity: 0;
-    animation: twinkleStar 3s infinite ease-in-out;
+    animation: twinkleStar 3.5s infinite ease-in-out;
 }
 
 @keyframes twinkleStar {
-    0%, 100% { opacity: 0; transform: scale(0.5); }
-    50% { opacity: 0.6; transform: scale(1.2); filter: drop-shadow(0 0 5px #d4af37); }
+    0%, 100% { opacity: 0; transform: scale(0.6); }
+    50% { opacity: 0.5; transform: scale(1.1); filter: drop-shadow(0 0 4px #ffffff); }
 }
