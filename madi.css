@@ -531,45 +531,68 @@ section {
 }
 
 /* Область сердца */
-.heart-wrapper {
+/* --- НОВАЯ КНОПКА PLAY (В СТИЛЕ YOUTUBE) --- */
+.play-wrapper {
     position: relative;
     display: inline-block;
-    width: 100px; height: 100px;
+    width: 90px;
+    height: 90px;
 }
 
-.heart-pulse-ring {
+.play-pulse-ring {
     position: absolute;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    width: 80px; height: 80px;
-    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    width: 75px;
+    height: 75px;
+    border: 2px solid rgba(212, 175, 55, 0.4); /* Элегантное золотистое свечение */
     border-radius: 50%;
-    animation: goldWave 2.2s infinite ease-out;
+    animation: playWave 2s infinite ease-out;
 }
 
-@keyframes goldWave {
+@keyframes playWave {
     0% { width: 70px; height: 70px; opacity: 1; }
-    100% { width: 140px; height: 140px; opacity: 0; }
+    100% { width: 150px; height: 150px; opacity: 0; }
 }
 
-.heart-btn {
+.play-btn {
     position: absolute;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3.6rem;
+    width: 75px;
+    height: 75px;
+    background: linear-gradient(135deg, #dd2c00 0%, #b71c1c 100%); /* Насыщенный красный цвет YouTube */
+    border-radius: 50%;
     cursor: pointer;
     user-select: none;
     z-index: 10;
-    filter: drop-shadow(0 4px 20px rgba(0,0,0,0.25));
-    animation: dramaticHeartbeat 1.5s infinite ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 25px rgba(183, 28, 28, 0.5);
+    transition: all 0.2s ease-in-out;
 }
 
-@keyframes dramaticHeartbeat {
-    0% { transform: translate(-50%, -50%) scale(1); }
-    14% { transform: translate(-50%, -50%) scale(1.15); }
-    28% { transform: translate(-50%, -50%) scale(1); }
-    42% { transform: translate(-50%, -50%) scale(1.15); }
-    70% { transform: translate(-50%, -50%) scale(1); }
+/* Белая иконка треугольника внутри кнопки */
+.play-btn svg {
+    width: 32px;
+    height: 32px;
+    fill: #ffffff;
+    margin-left: 4px; /* Легкое смещение вправо для идеальной центровки треугольника */
+    transition: transform 0.2s ease;
+}
+
+/* Эффект при нажатии и наведении */
+.play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+    background: linear-gradient(135deg, #ff3d00 0%, #dd2c00 100%);
+    box-shadow: 0 8px 30px rgba(221, 44, 0, 0.6);
+}
+
+.play-btn:active {
+    transform: translate(-50%, -50%) scale(0.95);
 }
 
 .stars-container {
