@@ -4,48 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мади & Жазира - Үйлену тойы</title>
-    <!-- Подключение шрифтов -->
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Мади & Жазира">
+    <meta property="og:description" content="Үйлену тойына шақыру">
+    <meta property="og:url" content="https://nurzzhannn.github.io/Madi-toiii/">
+    <meta property="og:image" content="https://nurzzhannn.github.io/Madi-toiii/preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="madi.css">
 </head>
 <body>
-<!-- Роскошная интерактивная заставка -->
-<div id="welcome-screen">
-    <!-- Эффект мерцающих искр на фоне -->
-    <div class="stars-container">
-        <div class="star" style="top: 20%; left: 15%; animation-delay: 0s;">✨</div>
-        <div class="star" style="top: 15%; left: 80%; animation-delay: 0.4s;">✨</div>
-        <div class="star" style="top: 75%; left: 20%; animation-delay: 0.8s;">✨</div>
-        <div class="star" style="top: 80%; left: 75%; animation-delay: 1.2s;">✨</div>
-    </div>
 
-    <div class="welcome-content">
-        <!-- Традиционный свадебный узор сверху -->
-        <div class="welcome-ornament">
-            <svg viewBox="0 0 100 30" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 15 Q 25 5, 50 15 T 90 15 M 50 5 Q 50 25, 50 25" fill="none" stroke="rgba(212, 175, 55, 0.5)" stroke-width="1.5" stroke-linecap="round"/>
-                <circle cx="50" cy="15" r="3" fill="#d4af37"/>
-            </svg>
+    <!-- Интерактивная заставка (Welcome Screen) -->
+    <div id="welcome-screen">
+        <div class="stars-container">
+            <div class="star" style="top: 20%; left: 15%; animation-delay: 0s;">✨</div>
+            <div class="star" style="top: 15%; left: 80%; animation-delay: 0.4s;">✨</div>
+            <div class="star" style="top: 75%; left: 20%; animation-delay: 0.8s;">✨</div>
+            <div class="star" style="top: 80%; left: 75%; animation-delay: 1.2s;">✨</div>
         </div>
 
-        <p class="welcome-subtitle">ҚАДАМ БАСЫҢЫЗ</p>
-        <h1 class="welcome-title">МАДИ МЕН ЖАЗИРАНЫҢ<br>ҮЙЛЕНУ ТОЙЫ</h1>
-        
-        <!-- Пульсирующее золотое кольцо вокруг сердечка -->
-        <div class="heart-wrapper">
-            <div class="heart-pulse-ring"></div>
-            <div id="start-button" class="heart-btn">❤️</div>
+        <div class="welcome-content">
+            <div class="welcome-ornament">
+                <svg viewBox="0 0 100 30" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 15 Q 25 5, 50 15 T 90 15 M 50 5 Q 50 25, 50 25" fill="none" stroke="rgba(212, 175, 55, 0.5)" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="50" cy="15" r="3" fill="#d4af37"/>
+                </svg>
+            </div>
+            <p class="welcome-subtitle">ҚАДАМ БАСЫҢЫЗ</p>
+            <h1 class="welcome-title">МАДИ МЕН ЖАЗИРАНЫҢ<br><span class="gold-text-light">ҮЙЛЕНУ ТОЙЫ</span></h1>
+            
+            <!-- Кнопка изменена с сердечка на стильный плеер YouTube -->
+            <div class="play-wrapper">
+                <div class="play-pulse-ring"></div>
+                <div id="start-button" class="play-btn">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<!-- Скрытый аудио-плеер (убедись, что файл wedding-music.mp3 лежит в папке) -->
-<audio id="weddingAudio" loop>
-    <source src="wedding-music.mp3" type="audio/mpeg">
-</audio>
+    <audio id="weddingAudio" loop>
+        <source src="wedding-music.mp3" type="audio/mpeg">
+    </audio>
 
-    <!-- 1. Главный экран -->
     <section class="hero-section">
         <div class="hero-bg"></div>
         <div class="hero-content">
@@ -55,17 +64,15 @@
         </div>
     </section>
 
-    <!-- 2. Текст приглашения -->
     <section class="section-spacer invitation-text-section">
         <div class="section-inner-frame">
-            <h2 class="script-title">Құрметті</h2>
+            <h2 class="script-title-white">Құрметті</h2>
             <p class="guest-categories">
                 АҒАЙЫН-ТУЫС, БАУЫРЛАР, КҰДА-ЖЕКЖАТ, НАҒАШЫ-ЖИЕН,<br>
                 БӨЛЕЛЕР, ҚҰРБЫ-ҚҰРДАС, ДОС-ЖАРАНДАР,<br>
                 ӘРІПТЕСТЕР, КӨРШІЛЕР!
             </p>
             
-            <!-- Изящный свадебный узор (вензель) -->
             <div class="wedding-ornament">
                 <svg viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 10 Q 25 0, 40 10 T 70 10 T 90 10 M 50 2 L 50 18 M 45 10 A 5 5 0 1 1 55 10 A 5 5 0 1 1 45 10" stroke="currentColor" stroke-width="1" fill="none"/>
@@ -81,39 +88,13 @@
             </p>
         </div>
     </section>
-    <!-- Скрытый аудио-плеер -->
-    <audio id="weddingAudio" loop>
-        <source src="wedding-music.mp3" type="audio/mpeg">
-    </audio>
 
-    <script>
-    document.getElementById('start-button').addEventListener('click', function() {
-        // 1. Запускаем музыку
-        var audio = document.getElementById('weddingAudio');
-        audio.play().catch(function(error) {
-            console.log("Ошибка воспроизведения аудио:", error);
-        });
-
-        // 2. Добавляем класс скрытия для плавной анимации исчезновения заставки
-        var welcome = document.getElementById('welcome-screen');
-        welcome.classList.add('hidden');
-
-        // 3. Полностью удаляем заставку из структуры через полсекунды (после завершения анимации)
-        setTimeout(function() {
-            welcome.style.display = 'none';
-        }, 600);
-    });
-</script>
-</body>
-
-    <!-- 3. Программа (Таймлайн) -->
     <section class="section-spacer program-section">
         <div class="section-inner-frame">
             <h2 class="section-title">ТОЙ САЛТАНАТЫ:</h2>
-            <p class="date-text">15 тамыз 2026 жыл</p>
-            <p class="time-main">Сағат 18:00</p>
+            <p class="date-text">20 тамыз 2026 жыл</p>
+            <p class="time-main">Сағат 17:00</p>
             
-            <!-- Изящный свадебный узор -->
             <div class="wedding-ornament">
                 <svg viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 10 Q 25 0, 40 10 T 70 10 T 90 10 M 50 2 L 50 18 M 45 10 A 5 5 0 1 1 55 10 A 5 5 0 1 1 45 10" stroke="currentColor" stroke-width="1" fill="none"/>
@@ -122,54 +103,69 @@
 
             <h2 class="script-title">Той бағдарламасы:</h2>
             <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-icon">🥂</div>
-                <div class="timeline-content">
-                    <div class="time">16:30</div>
-                    <div class="event-desc">ҚОНАҚТАРДЫҢ ЖИНАЛУЫ</div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                            <path d="M7 3h4v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V3h4zm10 0h4v8a4 4 0 0 1-4 4h-0a4 4 0 0 1-4-4V3h4zM9 15v6M5 21h8M19 15v6M15 21h8"/>
+                        </svg>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="time">17:00</div>
+                        <div class="event-desc">ҚОНАҚТАРДЫҢ ЖИНАЛУЫ</div>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-icon">✨</div>
-                <div class="timeline-content">
-                    <div class="time">17:00</div>
-                    <div class="event-desc">БЕТАШАР</div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                            <path d="M12 2l2.5 6.5L21 11l-5 5.5 1.5 7-5.5-4-5.5 4 1.5-7-5-5.5 6.5-2.5L12 2z"/>
+                        </svg>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="time">18:00</div>
+                        <div class="event-desc">БЕТАШАР</div>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-icon">💍</div>
-                <div class="timeline-content">
-                    <div class="time">18:00</div>
-                    <div class="event-desc">ТОЙДЫҢ БАСТАЛУЫ</div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                            <circle cx="9" cy="13" r="5" />
+                            <circle cx="15" cy="11" r="5" />
+                        </svg>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="time">18:30</div>
+                        <div class="event-desc">ТОЙДЫҢ БАСТАЛУЫ</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. Место проведения -->
     <section class="section-spacer location-section">
         <div class="section-inner-frame">
             <h2 class="script-title">Мекен-жайымыз:</h2>
             <p class="address-text">
-                АЛМАТЫ облысы,<br>
-                Бесағаш ауылы,<br>
-                Аэропортная, 24<br>
-                <strong>"SYLTAN SARAI"</strong> МЕЙРАМХАНАСЫ
+                АЛМАТЫ қаласы,<br>
+                Бухтарминская, 124<br>
+                <span class="restaurant-name">"BELLA GRAND"</span> МЕЙРАМХАНАСЫ
             </p>
             <div class="btn-container">
-                <a href="https://2gis.kz/almaty/firm/7000000102345678" target="_blank" class="btn-link">КАРТАНЫ АШУ</a>
+                <a href="https://go.2gis.com/Lk22I" target="_blank" class="btn-link">КАРТАНЫ АШУ</a>
             </div>
 
-            <div class="hosts-block">
-                <h2 class="script-title">Той иелері:</h2>
-                <p class="hosts-names">Майгүл</p>
-                <p class="hosts-names">Нұрлан - Маржан</p>
-                
+            <div class="hosts-card">
+                <div class="card-ornament-top">✦ ✦ ✦</div>
+                <h2 class="hosts-title">Той иелері:</h2>
+                <div class="hosts-divider"></div>
+                <p class="hosts-names">Нұрлан — Маржан</p>
+                <p class="hosts-secondary">& Майгүл</p>
+                <div class="card-ornament-bottom">Шаңырағымыздан ақ деггей үзілмесін!</div>
             </div>
         </div>
     </section>
 
-    <!-- 5. Таймер обратного отсчета -->
     <section class="section-spacer countdown-section">
         <div class="countdown-bg"></div>
         <div class="countdown-content">
@@ -181,7 +177,6 @@
                 <div class="timer-block"><span id="seconds">00</span><label>секунд</label></div>
             </div>
             
-            <!-- Нижний узор внутри таймера -->
             <div class="wedding-ornament light">
                 <svg viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 10 Q 25 0, 40 10 T 70 10 T 90 10 M 50 2 L 50 18 M 45 10 A 5 5 0 1 1 55 10 A 5 5 0 1 1 45 10" stroke="currentColor" stroke-width="1" fill="none"/>
@@ -190,15 +185,29 @@
         </div>
     </section>
 
-    <!-- Красивый мягкий подвал в тон сайта -->
     <footer class="custom-footer">
         <p class="made-by-text">This website was made by <span class="designer-name">Nurzhan</span></p>
         <p class="footer-copyright">&copy; 2026 • All rights reserved</p>
     </footer>
 
-    <!-- Таймер JS -->
     <script>
-        const weddingDate = new Date(2026, 7, 15, 18, 30, 0).getTime();
+        document.getElementById('start-button').addEventListener('click', function() {
+            var audio = document.getElementById('weddingAudio');
+            audio.play().catch(function(error) {
+                console.log("Ошибка аудио:", error);
+            });
+
+            var welcome = document.getElementById('welcome-screen');
+            welcome.classList.add('hidden');
+
+            setTimeout(function() {
+                welcome.style.display = 'none';
+            }, 600);
+        });
+    </script>
+
+    <script>
+        const weddingDate = new Date(2026, 7, 20, 17, 0, 0).getTime();
 
         const countdown = setInterval(function() {
             const now = new Date().getTime();
